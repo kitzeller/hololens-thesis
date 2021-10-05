@@ -1,11 +1,42 @@
+## 10/4/2021
+
+#### Procedural Terrain & Sound in Unity
+- Perlin noise, random noise, simplex noise
+- Using `Terrain` and `TerrainData.GetHeights()`. The height samples are represented as float values ranging from 0 to 1. The array has the dimensions [height,width] and is indexed as [y,x].
+![Perlin Terrain](imgs/PerlinTerrain.PNG)
+- A slice is taken on the y-axis. Heights are re-normalized [-1, 1] and used to create a waveform.
+- Clip Plane shader [tutorial](https://www.ronja-tutorials.com/post/021-plane-clipping/)
+
+#### AR "Performances"
+- [Real-time AR performance. Prolight + Sound exhibition](https://www.youtube.com/watch?v=tc9eWK9A2Jw&ab_channel=dreamlaser)
+- [Nautilus: Dance Performance with Interactive Augmented Reality](https://www.youtube.com/watch?v=jddd8tgPdwI&ab_channel=AndreasFischer)
+  - Voxel projections of dancers
+- [ViFlow - Interactive Augmented Reality for Dance](https://www.youtube.com/watch?v=-lHECVWNWSE&ab_channel=JimBach)
+  - Interactable projections
+- [0AR Trailer | Dance Performance in AR (Augmented Reality) for Public Spaces](https://www.youtube.com/watch?v=eXGaYACpgqQ&ab_channel=A%CE%A6E)
+  - AR through the lens of a mobile device
+- [Dancing with holograms: CWRU stages dance performance using Microsoft HoloLens](https://www.youtube.com/watch?v=arqO9vgS000&ab_channel=CaseWesternReserveUniversity)
+  - Audience equipped with HoloLens
+  - Holographic set design, particle effects
+- [HoloLens art installation in Times Square](https://www.youtube.com/watch?v=qoyvVFv2R3c&ab_channel=CNET)
+  - virtual 3D objects projected onto outdoor spaces
+- [Augmented Reality Concert at Home - Hoverlay](https://www.youtube.com/watch?v=Te28s4IZ4p4&ab_channel=Hoverlay)
+  - Using AR to transport performers to different places. Viewed through camera lens.
+- [augmented reality artist performance on stage](https://www.youtube.com/watch?v=DRpHIRcb_e8&ab_channel=OctosenseAR)
+  - Literally a 3D model of Rihanna singing and dancing, viewed through camera lens.
+- [Code Augmented Reality Live (CARL)](https://clinicopensourcearts.org/index.php/portfolio/code-augmented-reality-live-carl)
+  - An open-source mobile augmented reality experience
+  - A programmer/performer codes a 3D environment on the fly using a raymarching algorithm in GLSL. Participants view render on their phones.
+  - https://github.com/catilac/CARL
+  - I tried out the sample and it just overlays the camera view with a shader graphic. There is no "real" spatial awareness as the view moves with you, although you can turn around from the pivot point. Still super cool stuff!
+
+![CARL](imgs/CARL.jpg)
+
 ## 9/27/2021
 - Found [Holographic Remoting](https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unity/unity-play-mode?tabs=openxr) for Unity - super useful for quickly testing changes in the HoloLens!
 - Followed [how to add near interactivity](https://docs.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/features/input/how-to-add-near-interactivity?view=mrtkunity-2021-05) to add custom input (touch) handling for [mesh deformation](https://catlikecoding.com/unity/tutorials/mesh-deformation/). This work is a starting point for terrain interaction/wave synthesis.
 - Added mesh volume calculation as a volume/pitch modifier to an looping AudioClip (one sphere for volume, one for pitch). Would be cool to use the waveform as a live texture somewhere.
 ![Mesh Deformation](imgs/Mesh_Deformation_Touch_Demo.gif)
-
-#### Procedural Terrain/Mesh Generation in Unity
-- Perlin noise, random noise, simplex noise
 
 #### Procedural Audio Generation in Unity
 - Unity script for programmatic `AudioClip` generation from [API doc](https://docs.unity3d.com/ScriptReference/AudioClip.Create.html).
