@@ -1,4 +1,13 @@
 ## Meetings (Tuesdays @ 11am PST/2pm EST)
+
+### 10/5/2021
+- Fractal noise for terrain generation, https://thebookofshaders.com/13/
+- CARL would be a good paper reference
+- Looking for paper about HoloLens dance performance... couldn't find one :(
+- https://www.mdpi.com/2076-3417/11/16/7259/pdf
+- metal note, talk about thesis next time 
+- end of semester, backgrounds and proposal
+
 ### 9/21/2021
 Notes
 - Object recognition is cool
