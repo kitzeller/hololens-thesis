@@ -1,3 +1,124 @@
+# 11/10/2021
+
+- [ALIVEmusic - Augmented Live music performance using Immersive Visualisation and Emotion](https://www.researchgate.net/profile/Richard-Kronland-Martinet/publication/338476696_Proceedings_of_the_14th_International_Symposium_on_Computer_Music_Multidisciplinary_Research/links/5f4397ed299bf13404ebf6ba/Proceedings-of-the-14th-International-Symposium-on-Computer-Music-Multidisciplinary-Research.pdf#page=216)
+  - Performance: https://www.youtube.com/watch?v=yEShkolBj-s&ab_channel=matdiffusion
+
+
+- [Expressive Control of Indirect Augmented Reality During Live Music Performances](https://www.researchgate.net/publication/236594734_Expressive_Control_of_Indirect_Augmented_Reality_During_Live_Music_Performances)
+  - Performance: https://www.youtube.com/watch?v=nyVs_5TfN4c&ab_channel=BeatSigner
+
+
+[Touching Light: A Framework for the Facilitation of Music-Making in Mixed Reality](https://researchrepository.wvu.edu/cgi/viewcontent.cgi?article=9078&context=etd)
+
+
+##### Glitch Lich Band/Wave Terrian Sythensis
+
+- http://www.curtismckinney.com/WP-Content/resources/papers/Visualizing2013.pdf
+- http://curtismckinney.com/WP-Content/resources/papers/OSCthulhuICMC2012.pdf
+- https://www.academia.edu/download/37693991/SLEO_2012_Proceedings.pdf#page=122
+- Collaboration and Embodiment in Networked Music Interfaces for Live Performance
+  - https://core.ac.uk/download/pdf/60240897.pdf
+- Lich.js can be used by going to chadmckinneyaudio.com/lich. Binaries for Yig, the Father of Serpents and Shoggoth have been made available at chadmckinneyaudio.com/YigAndShoggoth.zip
+- Shoggoth - An Interactive 3D Network Music Space
+  - http://www.chadmckinneyaudio.com/WP-Content/resources/papers/ShoggothNIME2013.pdf
+- http://eprints.bournemouth.ac.uk/22513/
+
+# 11/5/2021
+
+More related/background papers!
+
+[A Vintage Virtual Reality Interview](http://www.jaronlanier.com/vrint.html)
+Super neat interview with "the founder" of VR - Jaron Lanier
+
+[Mobile Augmented Reality](https://www.elsevier.com/__data/assets/pdf_file/0009/96966/Mobile_Augmented_Reality.pdf)
+This book section gives a great overview of Mobile device-based AR
+
+[Augmented Reality: A class of displays on the reality-virtuality continuum](https://www.researchgate.net/profile/Paul-Milgram/publication/228537162_Augmented_reality_A_class_of_displays_on_the_reality-virtuality_continuum/links/0c96052ade63de29c0000000/Augmented-reality-A-class-of-displays-on-the-reality-virtuality-continuum.pdf)
+This is a landmark paper that describes the Reality-Virtuality (RV) Continuum - an awesome framework for looking at AR/AV/VR/MR etc
+
+[Revisiting Milgram and Kishino's Reality-Virtuality Continuum](https://www.frontiersin.org/articles/10.3389/frvir.2021.647997/full)
+Related to above
+
+
+[Snapping and chatting away: Consumer motivations for and outcomes of interacting with Snapchat AR ad lens](https://www.sciencedirect.com/science/article/pii/S0736585320301738?casa_token=3JIyLQhQMfoAAAAA:7n88uR83NF_bw1YEvm-1ydCEko0SeKN-PPmOLQ-_IWm6CyXDmlB-9y6KsA67zejRYpks_NZ_)
+An interesting paper on the commercial usage of AR
+
+[Disney's Aladdin: First Steps Toward Storytelling in Virtual Reality](https://dl.acm.org/doi/pdf/10.1145/237170.237257?casa_token=lEbIh_mHRlMAAAAA:f3Y7JxhcMF0S7JmS8xGfS_JbRxjeSx99oqMqJZ9b1NtiUgAZR3rjcXzjM67el264qbzTnd8L3FZA)
+Really new early-applications of AR for performance
+
+[Defining VR](http://papers.cumincad.org/data/works/att/27eb.content.pdf)
+Old paper - looks towards a definition of VR that is device-agnostic
+
+[A Classification Scheme for Multi-Sensory Augmented Reality](https://dl.acm.org/doi/pdf/10.1145/1315184.1315216?casa_token=G-LpWeXBTwMAAAAA:peLEK0K5x--YsE6Z4YjD7aAhjVSmwBuPQkbjW6vBl7OQym3YXRklIwqXDeoYWJ3ZAPXjicI_z9JP)
+Looking at other senses (besides visual)
+
+[Comparison of optical and video see-through, head-mounted displays](https://www.researchgate.net/publication/228796737_Comparison_of_optical_and_video_see-through_head-mounted_displays)
+Comparing different AR HMDS
+
+[Exploring enhancements for remote mixed reality collaboration](https://www.researchgate.net/publication/321405854_Exploring_enhancements_for_remote_mixed_reality_collaboration/figures?lo=1)
+
+[The CAVE: audio visual experience automatic virtual environment](https://link.gale.com/apps/doc/A12353475/AONE?u=mlin_c_worpoly&sid=googleScholar&xid=b62a5199)
+Exploration of VR alternatives
+
+[The ultimate VR, AR, MR guide](https://www.aniwaa.com/guide/vr-ar/ultimate-vr-ar-mr-guide/)
+
+
+[What is Mixed Reality?](https://docs.microsoft.com/en-us/windows/mixed-reality/discover/mixed-reality)
+Microsoft's definition of MR - some people not happy about placement
+
+![RV Continuum](imgs/RV-Continuum.png)
+
+
+# 10/30/2021
+
+Making a custom hand palm menu with MRTK
+- https://localjoost.github.io/migrating-to-mrkt2-making-hand-palm-menu/
+- https://github.com/LocalJoost/HandPalmMenu
+
+# 10/20/2021
+
+- Custom grid mesh, get nearest vertex on click & drag
+
+```
+    void OnMouseDown() {
+        screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+
+        Vector3 curPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+
+        float minDistanceSqr = Mathf.Infinity;
+        for (int i = 0; i < vertices.Length; i++) {
+            Vector3 diff = curPosition - vertices[i];
+            float distSqr = diff.sqrMagnitude;
+            if (distSqr < minDistanceSqr) {
+                minDistanceSqr = distSqr;
+                nearestVertexIndex = i;
+            }
+        }
+    }
+
+    void OnMouseDrag() {
+        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
+
+        vertices[nearestVertexIndex] = curPosition;
+        mesh.vertices = vertices;
+        mesh.RecalculateNormals();
+    }
+  ```
+
+# 10/13/2021
+
+Some master's thesis exploring the HoloLens
+- http://bth.diva-portal.org/smash/get/diva2:1305851/FULLTEXT02.pdf
+- https://arxiv.org/pdf/1706.08096.pdf
+- https://dspace.mit.edu/bitstream/handle/1721.1/119596/1076270652-MIT.pdf?sequence=1&isAllowed=y
+
+Some other projects
+- Fenek: A VR livecoding system https://github.com/m-schuetz/Fenek
+- CodeChisel 3D: Live programming with three.js and webVR https://robert.kra.hn/past-projects/live-programming-with-three-and-webvr.html
+
+
 ## 10/4/2021
 
 #### Procedural Terrain & Sound in Unity

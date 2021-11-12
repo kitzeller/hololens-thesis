@@ -1,4 +1,54 @@
-## Meetings (Tuesdays @ 11am PST/2pm EST)
+## Meetings
+
+### 11/12/2021
+
+Action Items
+- Next week meet at 11am PST/2pm EST
+- Next week show sound
+- Find more performances/examples of wave terrain synthesis
+- Decide on reader, email thesis summary
+- Follow up on Shoggoth repo
+
+Paper
+- Maybe organise related work thematically, e.g. wave synthesis, livecoding & VR
+- Explore wave synthesis in background section, refer to pioneers in the field
+- Are we going to have a language component?
+- Find more examples
+
+### 10/29/2021
+- CodeKlavier: https://github.com/cappelnord/codeklavier-ar
+- https://codeklavier.space/arquatic
+- https://replit.com/site/kaboom
+- http://www.charlie-roberts.com/pubs/collaborative-live-coding_nime_2014.pdf
+- https://vimeo.com/94046155
+
+### 10/12/2021
+- evaluate performance?
+  - what did audience think? did they understand? did they enjoy?
+- evaluate system?
+  - what affordances do I have now that I didn't have before - compare to other systems.
+- contaxt DxArts at UW to see about joining speaker series
+- livesteam static camera
+
+Paper
+- background
+  - hololens history
+  - hololens applications
+  - AR performances
+    - dancing
+    - CARL
+  - VR performances
+  - language -> soem formalizism for tokens -> body languaguage, nodes, voice, text
+    - how they're combined, tree, generate outputs in the end
+
+Thesis Info
+
+The thesis proposal should be completed within the first three credits of thesis credit. It constitutes a formal written document that describes the research area, identifies the research question, situates the work in the context of related work, describes the research methods to be used, and how the research question will be answered. The advisor and reader must approve the written proposal before an oral presentation can be scheduled. 
+
+The oral presentation consists of a 15 minute talk and 5 minute public Q&A period that is open to the public, and then a 10 minute question and critique period from IMGD Steering faculty.
+
+
+
 
 ### 10/5/2021
 - Fractal noise for terrain generation, https://thebookofshaders.com/13/
