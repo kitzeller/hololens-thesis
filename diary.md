@@ -1,3 +1,45 @@
+# 11/14/2021
+
+#### Embodiment
+
+[Livecoding the SynthKit: Little Bits as an Embodied Programming Language](https://www.researchgate.net/publication/282722571_Livecoding_the_SynthKit_Little_Bits_as_an_Embodied_Programming_Language)
+
+[Alex McLean - What is embodied programming?](https://slab.org/what-is-embodied-programming/)
+
+[Baalman, Marije - Embodiment of code](https://zenodo.org/record/18748#.YZY3H1NKh25)
+
+#### Wave Terrain Synth
+
+[Developing a flexible and expressive realtime polyphonic wave terrain synthesis instrument based on a visual and multidimensional methodology](https://ro.ecu.edu.au/cgi/viewcontent.cgi?article=1107&context=theses)
+
+[Gestural Sounds by Means of Wave Terrain Synthesis](http://www.academic.konfuzo.net/publications/phd/Mills-Souza-1999-SBC.pdf)
+
+[Possibilities for Dynamical Wave Terrain Synthesis](https://www.stuartgjames.com/uploads/1/7/4/5/17453311/2003jamesacmc.pdf)
+
+
+[Understanding and Using Csound’s GEN Routines](https://www.eumus.edu.uy/eme/ensenanza/electivas/csound/materiales/book_chapters/02nelson/02nelson.html)
+
+[Wave terrain synthesis with Csound](http://www.csounds.com/jmc/Articles/Wts/WTS.html)
+
+
+https://www.linkedin.com/pulse/building-modular-synthesizer-unity-using-pure-data-heavy-rothmann/
+
+http://sites.music.columbia.edu/brad/uRTcmix/uRTcmix-tutorial.html
+
+https://github.com/tmhglnd/wave-terrain-synthesis
+![Wave Terrain Max](imgs/WaveTerrainMax.png)
+
+
+
+#### HoloLens Spectator View
+Spectator View is an augmented reality product that enables viewing HoloLens experiences from secondary devices. Spectator View has multiple configurations and supports a variety of scenarios from filming quick prototypes to producing keynote demos.
+
+- https://github.com/microsoft/MixedReality-SpectatorView
+- https://microsoft.github.io/MixedReality-SpectatorView/README.html
+- https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples
+- https://docs.microsoft.com/en-us/windows/mixed-reality/design/spectator-view
+
+
 # 11/10/2021
 
 - [ALIVEmusic - Augmented Live music performance using Immersive Visualisation and Emotion](https://www.researchgate.net/profile/Richard-Kronland-Martinet/publication/338476696_Proceedings_of_the_14th_International_Symposium_on_Computer_Music_Multidisciplinary_Research/links/5f4397ed299bf13404ebf6ba/Proceedings-of-the-14th-International-Symposium-on-Computer-Music-Multidisciplinary-Research.pdf#page=216)
