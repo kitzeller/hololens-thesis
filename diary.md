@@ -1,3 +1,63 @@
+# 11/18/2021
+
+**Note**: there is an issue with SpherePointers and TerrainColliders. Can only use Far Hand Pointer to "touch" terrain, not SpherePointer on finger. Switching from terrain system to custom mesh system with a convex mesh collider.
+
+# 11/15/2021
+
+#### Audio Mixing 
+Combining multiple signals (`value += terrains[j].GetValue(i);`) before sending as output waveform data.
+
+``` csharp
+private void OnAudioFilterRead(float[] data, int channels) {
+        for (var i = 0; i < terrains.Length; i++) {
+            if (terrainEnabled[i]) terrains[i].Traverse();
+        }
+        var samples = data.Length / channels;
+        for (var i = 0; i < samples; i += STEP) {
+            float value = 0f;
+            // Get signals
+            for (var j = 0; j < terrains.Length; j++) {
+                if (terrainEnabled[j]) value += terrains[j].GetValue(i);
+            }
+            value *= MASTER_VOLUME;
+            for (var ch = 0; ch < channels; ++ch) {
+                data[i * channels + ch] = value;
+            }
+        }
+    }
+```
+![Multiple Terrains](imgs/MultipleTerrains.PNG)
+
+#### Noise
+Added simplex, fractal, voronoi, perlin, worley and value noise.
+
+![Noise Types](imgs/NoiseTypes.PNG)
+
+https://catlikecoding.com/unity/tutorials/noise/
+https://github.com/Scrawk/Procedural-Noise
+https://gametorrahod.com/various-noise-functions/
+
+#### Trajectory and Runtime Mesh Manipulation
+```csharp
+// OnAudioFilterRead is called every time a chunk of audio is sent to the filter (this happens frequently, every ~20ms depending on the sample rate and platform). The audio data is an array of floats ranging from [-1.0f;1.0f] 
+private void OnAudioFilterRead(float[] data, int channels) {
+        var samples = data.Length / channels;
+        yOffset = count++ % width;
+        Debug.DrawLine(new Vector3(yOffset, 30, 0), new Vector3(yOffset, 30, width), Color.red, 0.1f);
+
+        for (var i = 0; i < samples; ++i) {
+            var value = ((Heights[i % width, yOffset] + 1)/2) * Volume;
+            for (var ch = 0; ch < channels; ++ch) {
+                data[i * channels + ch] = value;
+            }
+        }
+    }
+```
+**The red line is the trajectory. It can move in either the x or z axis to take a slice.**
+![Mesh Scanning](imgs/MeshScanning.PNG)
+
+![Runtime Mesh Maniuplation](imgs/RunTimeMeshManipulation.PNG)
+
 # 11/14/2021
 
 #### Embodiment
@@ -121,7 +181,7 @@ Making a custom hand palm menu with MRTK
 
 - Custom grid mesh, get nearest vertex on click & drag
 
-```
+```csharp
     void OnMouseDown() {
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
@@ -203,7 +263,7 @@ Some other projects
 
 #### Procedural Audio Generation in Unity
 - Unity script for programmatic `AudioClip` generation from [API doc](https://docs.unity3d.com/ScriptReference/AudioClip.Create.html).
-```
+```csharp
 using UnityEngine;
 using System.Collections;
 
@@ -239,7 +299,7 @@ public class ExampleClass : MonoBehaviour
 }
 ```
 - Another example using `OnAudioFilterRead`
-```
+```csharp
 void OnAudioFilterRead(float[] data, int channels) {
     for (int i = 0; i < data.Length; i++) {
         data[i] = Mathf.Sin(2 * Mathf.PI * frequency * i / samplerate);
