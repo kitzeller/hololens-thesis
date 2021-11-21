@@ -1,5 +1,26 @@
 ## Meetings
 
+### 11/19/2021
+- "Stomp"
+- Linear interpolation to slow down playback
+- walk path
+- Divide between the progeamming and embodiment
+- Does this tool need to be modal in the same way?
+- Language vs system of controls
+- some formalism behind it
+- classify operations to justify it as a language
+- interface, music/art related conferences (NIME)
+- programming lang, could target other conferences
+- NIME deadline is Feb
+- what if we want to easily scale and quantize noise
+- gradient to scale noise function
+- define language
+
+Action Items
+- Meet sometime on Monday
+- Create aa Google doc defining all the operations
+
+
 ### 11/12/2021
 
 Action Items
