@@ -1,3 +1,135 @@
+# 11/28/2021
+
+#### Evaluation Frameworks
+[Virtual reality musical instruments: Guidelines for multisensory interaction design](https://dl.acm.org/doi/pdf/10.1145/2986416.2986431)
+
+1. Design sound, visual, touch and proprioception in tandem, and consider the mappings between these modalities
+2. Reduce latency
+3. Prevent or limit cybersickness
+4. Do not copy but leverage expert techniques
+5. Consider both natural and magical interactions
+6. Consider the ergonomics of the display
+7. Create a sense of presence
+8. Consider the representation of player’s body
+9. Make the experience social
+
+
+Scenography of immersive virtual musical instruments(https://ieeexplore.ieee.org/document/7006285)
+
+1. Musician Immersion
+2. Audience Visibility
+3. Audience Immersion
+4. Musician Visibility
+5. Gestures Continuity
+6. From Virtual to Physical
+
+# 11/24/2021
+
+#### Jaron Lanier
+http://www.jaronlanier.com/jaron%20whole%20earth%20review.pdf
+http://www.jaronlanier.com/instruments.html
+http://www.jaronlanier.com/vr.html
+https://www.youtube.com/watch?v=ItaPqJaUypY&ab_channel=JesseBikman
+
+#### Virtual Musical Instruments
+Virtual reality musical instruments: Guidelines for multisensory interaction design
+https://dl.acm.org/doi/pdf/10.1145/2986416.2986431
+
+IRMA (Interactive Real-time Measurement of Attention). 
+A method for the investigation of audiovisual computer music performances.
+http://gappp.net/medien/images/Paper-IRMA-MI-Pi-0.pdf
+
+3D interaction techniques for musical expression
+https://doi-org.ezpv7-web-p-u01.wpi.edu/10.1080/09298215.2019.1706584
+
+Interacting with 3D Reactive Widgets for Musical Performance
+https://hal.archives-ouvertes.fr/hal-00633750/file/11jnmr.pdf
+
+First Steps Towards Augmented Reality Interactive Electronic Music Production
+https://ieeexplore.ieee.org/document/9419126
+
+Drile: An Immersive Environment for hierarchical live-looping
+https://hal.archives-ouvertes.fr/hal-00530071
+
+
+Fijuu2: a game-based audio-visual performance and composition engine
+https://dl.acm.org/doi/10.1145/1279740.1279854
+
+
+Towards a choice of gestural constraints
+for instrumental performers 
+http://www-media.idmil.org/media/Trends_Ircam/DOS/P.Mul.pdf
+
+
+Virtual reality musical instruments: Guidelines for multisensory interaction design
+https://dl.acm.org/doi/abs/10.1145/2986416.2986431
+
+
+Music in Extended Realities
+https://ieeexplore.ieee.org/abstract/document/9328440
+
+
+Scenography of immersive virtual musical instruments
+https://ieeexplore.ieee.org/document/7006285
+
+
+OSC-XR: A Toolkit for Extended Reality Immersive Music Interfaces
+http://smc2019.uma.es/articles/S3/S3_04_SMC2019_paper.pdf
+
+
+Augmented Stage for Participatory Performances
+https://www.researchgate.net/profile/Dario-Mazzanti/publication/311309035_Augmented_Stage_for_Participatory_Performances/links/5e788ad7a6fdcccd6219240b/Augmented-Stage-for-Participatory-Performances.pdf
+
+
+CONNEXION
+https://przemekdanowski.com/?page_id=78
+https://panopticon.am/a-brief-history-of-virtual-reality-music-instruments-and-virtual-music-venues/
+https://www.youtube.com/watch?v=1jyxLFTQKqk&ab_channel=PrzemekDanowski
+
+# 11/21/2021
+
+Implemeneted custom speech commands
+https://thorprojects.com/blog/archive/2020/08/04/building-a-unity-project-with-speech-recognition-using-mrtk-for-a-hololens-2/
+
+```csharp
+using UnityEngine;
+using Microsoft.MixedReality.Toolkit.Input;
+using Microsoft.MixedReality.Toolkit;
+public class SpeechManager : MonoBehaviour, IMixedRealitySpeechHandler
+{
+
+  void Start()
+  {
+      CoreServices.InputSystem?.RegisterHandler<IMixedRealitySpeechHandler>(this);
+  }
+
+  void IMixedRealitySpeechHandler.OnSpeechKeywordRecognized(SpeechEventData eventData)
+  {
+      if (eventData.Command.Keyword == "keyword")
+      {
+        // Do something
+      }
+  }
+} 
+```
+
+To increase performance, could look into [Burst Compiler](https://www.raywenderlich.com/7880445-unity-job-system-and-burst-compiler-getting-started)
+
+
+https://www.youtube.com/channel/UCSbsafHQ-DHeIytCcsje-Rw/videos
+
+
+#### Shoggoth Heightmap Algorithms
+
+https://en.wikipedia.org/wiki/Heightmap
+
+Diamond Square
+https://en.wikipedia.org/wiki/Diamond-square_algorithm
+https://stevelosh.com/blog/2016/06/diamond-square/
+https://learn.64bitdragon.com/articles/computer-science/procedural-generation/the-diamond-square-algorithm
+https://answers.unity.com/questions/784960/procedural-terrain-square-diamond-algorithm.html
+http://worldcomp-proceedings.com/proc/p2013/CGV4061.pdf
+
 # 11/18/2021
 
 **Note**: there is an issue with SpherePointers and TerrainColliders. Can only use Far Hand Pointer to "touch" terrain, not SpherePointer on finger. Switching from terrain system to custom mesh system with a convex mesh collider.
